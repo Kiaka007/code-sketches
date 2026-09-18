@@ -1,6 +1,6 @@
 # code-sketches
 
-Small tools and sketches made in code — things worth keeping and showing, not full projects.
+Small tools and sketches made in code.
 
 Each sketch lives in its own dated subfolder: `YYYY-MM-topic/`. A sketch may graduate into its own standalone repo if it outgrows this space; until then, it lives here.
 
