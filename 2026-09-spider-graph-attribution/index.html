@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Spider Graph (ABC GPT)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout-row">
+        <section class="main-chat">
+            <div class="npc-title">
+                <div class="npc-combinator"></div>
+                <p class="npc-colon">:</p>
+                <div class="descriptor-combinator"></div>
+            </div>
+            <div class="output">
+                <p class="output-text" aria-live="polite">Drag a dial to generate text.</p>
+            </div>
+        </section>
+
+        <div class="panel">
+            
+            <figure class="graph-card">
+                <div class="depth-key" aria-hidden="true">
+                    <svg id="depth-key-svg" viewBox="0 0 104 40"></svg>
+                </div>
+                <button class="settings-btn" aria-label="Settings">
+                    <span class="icon-placeholder"></span>
+                </button>
+
+                <svg id="radar" viewBox="0 0 200 200"></svg>
+
+                <figcaption class="caption">Drag a node to control source weight.</figcaption>
+            </figure>
+
+            <ul class="stat-list">
+                <li class="stat-item">
+                    <div class="npc-stat">
+                        <span class="label" data-axis="dog">Dog:</span>
+                        <span class="leader"></span>
+                        <input class="value" type="number" min="0" max="1" step="0.1" value="0.00" data-axis="dog"></input>
+                    </div>
+                    <div class="descriptor">
+                        <span class="abbrev" data-axis="dog">(DOG)</span>
+                        <span class="desc-text" data-axis="dog">Dog Words</span>
+                    </div>
+                </li>
+                <li class="stat-item">
+                    <div class="npc-stat">
+                        <span class="label" data-axis="cat">Cat:</span>
+                        <span class="leader"></span>
+                        <input class="value" type="number" min="0" max="1" step="0.1" value="0.00" data-axis="cat"></input>
+                    </div>
+                    <div class="descriptor">
+                        <span class="abbrev" data-axis="cat">(CAT)</span>
+                        <span class="desc-text" data-axis="cat">Cat Words</span>
+                    </div>
+                </li>
+                <li class="stat-item">
+                    <div class="npc-stat">
+                        <span class="label" data-axis="bird">Bird:</span>
+                        <span class="leader"></span>
+                        <input class="value" type="number" min="0" max="1" step="0.1" value="0.00" data-axis="bird"></input>
+                    </div>
+                    <div class="descriptor">
+                        <span class="abbrev" data-axis="bird">(BIR)</span>
+                        <span class="desc-text" data-axis="bird">Bird Words</span>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="remap-btn">Remap Sources</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
