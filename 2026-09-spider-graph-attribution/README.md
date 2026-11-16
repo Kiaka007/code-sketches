@@ -95,3 +95,10 @@ Some items still on the todo list for this sketch are as follows:
 - Test and define limitations of local Flask instance and when a more robust deployment need be taken
 - Stylize
 - Templatize
+
+## 4.0 Web Version (`web/`)
+`web/` is a standalone, illustration-only copy of this interface that runs entirely in the browser, with no Flask server. It can be hosted on any static host (e.g. GitHub Pages) or opened straight from disk.
+- `web/model.js` is a JavaScript port of the forward pass and `generate` from `app/backend.py`, kept line-for-line where possible.
+- `web/weights.js` is generated from `app/weights.npz` by `web/export_weights.py`. Re-run that script if the model is retrained.
+- `web/index.html`, `web/script.js`, and `web/style.css` are **copies** of the root files, so changes to the full version won't carry over. `web/script.js` differs only in calling the in-browser model where the original calls `/api/generate`.
+- The sampler uses a different random-number generator than numpy, so text at a given dial setting won't match the Flask version character for character, though the model's behavior is the same.
